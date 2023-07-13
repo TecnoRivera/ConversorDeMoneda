@@ -5,13 +5,13 @@ public class ConversorMonedas {
 
     public static void main(String[] args) {
 
-        Icon icon = new ImageIcon(ConversorMonedas.class.getResource("alura-logo.png"));
+        //Icon icon = new ImageIcon(ConversorMonedas.class.getResource("alura-logo.png"));
         Object[] opciones = {"Conversor de Monedas", "Conversor de Temperatura"};
         Object[] opcionesMonedas = {"De Pesos a Dólar", "De Pesos a Euro", "De Pesos a Libras", "De Pesos a Yen", "De Pesos a Won Coreano", "De Dólar a pesos", "De Euro a Pesos", "De Libras a Pesos","De Yen a Pesos","De Won Coreano a Pesos"};
         Object[] opcionesTemperatura = {"De Celsius a Kelvin","De Celsius a Fahrenheit","De Fahrenheit a Celsius","De Fahrenheit a Kelvin","De Kelvin a Celsius","De Kelvin a Fahrenheit"};
         int respuesta = JOptionPane.YES_OPTION;
         while (respuesta == JOptionPane.YES_OPTION) {
-            Object opcion = JOptionPane.showInputDialog(null, "Selecciona una opcion: ", "Elegir", JOptionPane.QUESTION_MESSAGE, icon, opciones, opciones[0]);
+            Object opcion = JOptionPane.showInputDialog(null, "Selecciona una opcion: ", "Elegir", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
                 if (opcion.equals("Conversor de Monedas")) {
                     float opc = 0;
                     try {
@@ -24,7 +24,7 @@ public class ConversorMonedas {
                         opc = Float.parseFloat(JOptionPane.showInputDialog("Ingresa la cantidad de dinero que deseas convertir:"));
                     }
                     Object opcion2 = JOptionPane.YES_OPTION;
-                    opcion2 = JOptionPane.showInputDialog(null, "Selecciona una opcion: ", "Elegir", JOptionPane.QUESTION_MESSAGE, icon, opcionesMonedas, opcionesMonedas[0]);
+                    opcion2 = JOptionPane.showInputDialog(null, "Selecciona una opcion: ", "Elegir", JOptionPane.QUESTION_MESSAGE, null, opcionesMonedas, opcionesMonedas[0]);
                     if (opcion2.equals("De Pesos a Dólar")) {
                         float total = 0;
                         total = (float) (opc * 0.059);
@@ -84,7 +84,7 @@ public class ConversorMonedas {
                         }
                     }
                     Object opcion3 = JOptionPane.YES_OPTION;
-                    opcion3 = JOptionPane.showInputDialog(null, "Selecciona una opcion: ", "Elegir", JOptionPane.QUESTION_MESSAGE, icon, opcionesTemperatura, opcionesTemperatura[0]);
+                    opcion3 = JOptionPane.showInputDialog(null, "Selecciona una opcion: ", "Elegir", JOptionPane.QUESTION_MESSAGE, null, opcionesTemperatura, opcionesTemperatura[0]);
                     if (opcion3.equals("De Celsius a Kelvin")) {
                         float total = 0;
                         total = (float) (opc2 + 273.15);
